@@ -3,6 +3,8 @@
 #include <random>
 #include <vector>
 
+#include "AffineTransform.h"
+
 std::vector<int> random_options(const int max, const int amount) {
     std::vector<int> options(amount);
     std::random_device rd;
