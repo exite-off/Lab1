@@ -1,0 +1,27 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "F:/C++/Lab1/out/build/main",
+	"dir-cur-src" : "F:/C++/Lab1",
+	"dir-top-bld" : "F:/C++/Lab1/out/build/main",
+	"dir-top-src" : "F:/C++/Lab1",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "F:/C++/Lab1/out/build/main/CMakeFiles/Lab1.dir",
+	"sources" : 
+	{
+		"CMakeFiles/Lab1.dir/main.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "F:/C++/Lab1/main.cpp"
+		}
+	}
+}

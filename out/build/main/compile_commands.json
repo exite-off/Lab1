@@ -1,0 +1,8 @@
+[
+{
+  "directory": "F:/C++/Lab1/out/build/main",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -std=gnu++23 -fmodules-ts -fmodule-mapper=CMakeFiles\\Lab1.dir\\main.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Lab1.dir\\main.cpp.obj -c F:\\C++\\Lab1\\main.cpp",
+  "file": "F:\\C++\\Lab1\\main.cpp",
+  "output": "CMakeFiles\\Lab1.dir\\main.cpp.obj"
+}
+]
