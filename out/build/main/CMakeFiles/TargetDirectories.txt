@@ -1,3 +1,0 @@
-F:/C++/Lab1/out/build/main/CMakeFiles/Lab1.dir
-F:/C++/Lab1/out/build/main/CMakeFiles/edit_cache.dir
-F:/C++/Lab1/out/build/main/CMakeFiles/rebuild_cache.dir
