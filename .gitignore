@@ -1,3 +1,7 @@
+# ігноруємо все
+*
+
+# але не ігноруємо ці файли:
 !main.cpp
 !AffineTransform.h
-!AffineTransform.h
+!AffineTransform.cpp
