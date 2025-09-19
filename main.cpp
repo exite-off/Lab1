@@ -1,23 +1,17 @@
-﻿#include <fstream>
-#include <iostream>
-#include <random>
+﻿#include <iostream>
 #include <vector>
+#include "transformSystem.h"
+#include "point.h"
+#include "affineTransform.h"
 
-#include "AffineTransform.h"
-
-std::vector<int> random_options(const int max, const int amount) {
-    std::vector<int> options(amount);
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dist(0, max);
-    for (int i = 0; i < amount; i++) {
-        options[i] = dist(gen);
-    }
-    return options;
-}
+using namespace std;
 
 int main() {
-    // Todo...
+    // TEST *start*
+    Transform t {AffineTransform(vector<vector<double>>{{1, 2}, {3, 4}}, {9, 9}), AffineTransform(vector<vector<double>>{{1, 2}, {3, 4}}, {9, 9})};
+    Point2D p = t(Point2D(1, 1));
+    cout << "Resulting point: (" << p.x << ", " << p.y << ")" << endl;
+    // TEST *end*
 
     return 0;
 }
