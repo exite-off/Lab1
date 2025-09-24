@@ -4,16 +4,15 @@
 
 #include "point.h"
 #include <random>
+#include <utility>
 
 using namespace std;
 
-Transform::Transform(initializer_list<AffineTransform> transforms) {
+Transform::Transform(vector<AffineTransform> affineTransforms) {
     random_device rd;
     this->gen = mt19937(rd());
-    this->dist = uniform_int_distribution<int>(0, transforms.size() - 1);
-    for (const auto& transform : transforms) {
-        this->affineTransforms.push_back(transform);
-    }
+    this->dist = uniform_int_distribution<int>(0, affineTransforms.size() - 1);
+    this->transforms = std::move(affineTransforms);
 }
 
 Point2D Transform::operator()(Point2D point) {
