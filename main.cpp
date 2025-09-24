@@ -24,18 +24,23 @@ int main() {
     Point2D start;
     vector<AffineTransform> transforms;
 
+
     FileIO::read_file("F:\\C++\\Lab1\\input.txt", N, start, transforms);
     Transform system(transforms);
 
     vector<Point2D> points;
     points.reserve(N);
-    points.push_back(start);
+    points.push_back(system(start));
 
     for (int i = 1; i < N; i++) {
         points.push_back(system(points.back()));
     }
 
-    FileIO::write_in_file("output.txt", points);
+    FileIO::write_in_file("F:\\C++\\Lab1\\output.txt", points);
+
+    // for (const auto point : points) {
+    //     cout << point.x << " " << point.y << endl;
+    // }
 
     return 0;
 }
