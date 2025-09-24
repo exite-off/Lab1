@@ -24,12 +24,12 @@ int main() {
     Point2D start;
     vector<AffineTransform> transforms;
 
-    FileIO::read_file("SampleInput.txt", N, start, transforms);
+    FileIO::read_file("C:\\Users\\vfedi\\CLionProjects\\Lab1\\SampleInput.txt", N, start, transforms);
     Transform system(transforms);
 
     vector<Point2D> points;
     points.reserve(N);
-    points.push_back(start);
+    points.push_back(system(start));
 
     for (int i = 1; i < N; i++) {
         points.push_back(system(points.back()));
