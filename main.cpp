@@ -35,7 +35,9 @@ int main() {
         points.push_back(system(points.back()));
     }
 
-    FileIO::write_in_file("output.txt", points);
+    for (const auto point : points) {
+        cout << point.x << " " << point.y << endl;
+    }
 
     return 0;
 }
