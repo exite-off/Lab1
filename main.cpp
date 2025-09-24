@@ -8,7 +8,10 @@ using namespace std;
 
 int main() {
     // TEST *start*
-    Transform t {AffineTransform(vector<vector<double>>{{1, 2}, {3, 4}}, {9, 9}), AffineTransform(vector<vector<double>>{{1, 2}, {3, 4}}, {9, 9})};
+    Transform t 
+    {
+        AffineTransform(1, 2, 3, 4, 9, 9), AffineTransform(1, 2, 3, 4, 9, 9)
+    };  
     Point2D p = t(Point2D(1, 1));
     cout << "Resulting point: (" << p.x << ", " << p.y << ")" << endl;
     // TEST *end*
