@@ -8,11 +8,11 @@ using namespace std;
 
 class Transform {
 public:
-    Transform(initializer_list<AffineTransform> transforms);
+    Transform(vector<AffineTransform> affineTransforms);
     ~Transform()=default;
     Point2D operator()(Point2D point);
 private:
-    vector<AffineTransform> affineTransforms;
+    vector<AffineTransform> transforms;
     mt19937 gen;
     uniform_int_distribution<int> dist;
 };

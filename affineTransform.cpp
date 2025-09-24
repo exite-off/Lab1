@@ -7,10 +7,9 @@ AffineTransform::AffineTransform(double a11, double a12, double a21, double a22,
 {
 }
 
-Point2D AffineTransform::operator()(const Point2D & p) const
-{
-    double new_x = a11 *p.x + a12 * p.y + b1;
-    double new_y = a21 *p.x + a22 * p.y + b2;
-    
+Point2D AffineTransform::applyToPoint(const Point2D &p) const {
+    double new_x = a11 * p.x + a12 * p.y + b1;
+    double new_y = a21 * p.x + a22 * p.y + b2;
+
     return Point2D(new_x, new_y);
 }

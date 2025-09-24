@@ -10,5 +10,5 @@ private:
 public:
     AffineTransform(double a11, double a12, double a21, double a22, double b1, double b2);
 
-    Point2D operator()(const Point2D &p) const;
+    Point2D applyToPoint(const Point2D &p) const;
 };
