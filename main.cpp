@@ -24,8 +24,8 @@ int main() {
     Point2D start;
     vector<AffineTransform> transforms;
 
-    FileIO::read_file("SampleInput.txt", N, start, transforms);
-    Transform system(transforms); // треба переробити на vector, бо зараз initializer_list не підходить (точніше костилі треба юзать)
+    FileIO::read_file("F:\\C++\\Lab1\\input.txt", N, start, transforms);
+    Transform system(transforms);
 
     vector<Point2D> points;
     points.reserve(N);

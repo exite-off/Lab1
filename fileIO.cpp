@@ -7,17 +7,21 @@ using namespace std;
 void FileIO::read_file(const string &filepath, int &N, Point2D &startPoint, vector<AffineTransform> &transforms)
 {
     ifstream file(filepath);
-    if(!file){
-        cerr << "cant open file" << endl;
+    if(!file.is_open()){
+        cerr << "cant open file : " << endl;
         return;
     }
     file >> N;
     file >> startPoint.x >> startPoint.y;
+    cerr << "startPoint = " << startPoint.x << ", " << startPoint.y << endl;
 
     double a11, a12, a21, a22, b1, b2;
-    while(file >> a11 >> a12 >> a21>> a22>> b1>> b2){
-        AffineTransform t(a11, a12, a21, a22, b1, b2);
-        transforms.push_back(t);
+    int transformIndex = 0;
+    while (file >> a11 >> a12 >> a21 >> a22 >> b1 >> b2) {
+        transforms.emplace_back(a11, a12, a21, a22, b1, b2);
+        cout << "read #" << transformIndex + 1 << ": "
+            << a11 << " " << a12 << " " << a21 << " " << a22 << " " << b1 << " " << b2 << endl;
+        transformIndex++;
     }
     
     if(transforms.empty()){

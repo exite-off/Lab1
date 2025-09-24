@@ -9,5 +9,6 @@ add_executable(Lab1
     transformSystem.cpp
     point.cpp
     fileIO.cpp
+    SampleInput.txt
 )
 
