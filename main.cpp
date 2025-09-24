@@ -25,7 +25,7 @@ int main() {
     vector<AffineTransform> transforms;
 
 
-    FileIO::read_file("F:\\C++\\Lab1\\input.txt", N, start, transforms);
+    FileIO::read_file("C:\\Users\\vfedi\\CLionProjects\\Lab1\\SampleInput.txt", N, start, transforms);
     Transform system(transforms);
 
     vector<Point2D> points;
@@ -36,7 +36,7 @@ int main() {
         points.push_back(system(points.back()));
     }
 
-    FileIO::write_in_file("F:\\C++\\Lab1\\output.txt", points);
+    FileIO::write_in_file("C:\\Users\\vfedi\\CLionProjects\\Lab1\\out.txt", points);
 
     // for (const auto point : points) {
     //     cout << point.x << " " << point.y << endl;

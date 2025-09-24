@@ -16,8 +16,7 @@ void FileIO::read_file(const string &filepath, int &N, Point2D &startPoint, vect
 
     double a11, a12, a21, a22, b1, b2;
     while(file >> a11 >> a12 >> a21>> a22>> b1>> b2){
-        AffineTransform t(a11, a12, a21, a22, b1, b2);
-        transforms.push_back(t);
+        transforms.emplace_back(a11, a12, a21, a22, b1, b2);
     }
     
     if(transforms.empty()){
