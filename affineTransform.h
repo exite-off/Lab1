@@ -3,9 +3,12 @@
 #include <vector>
 #include "point.h"
 
-using namespace std;
+class AffineTransform{
+private:
+    double a11, a12, a21, a22;
+    double b1, b2;
+public:
+    AffineTransform(double a11, double a12, double a21, double a22, double b1, double b2);
 
-struct AffineTransform {
-    vector<vector<double>> matrix;
-    Point2D point;
+    Point2D operator()(const Point2D &p) const;
 };
