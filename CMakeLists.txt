@@ -8,5 +8,6 @@ add_executable(Lab1
     affineTransform.cpp
     transformSystem.cpp
     point.cpp
+    fileIO.cpp
 )
 
