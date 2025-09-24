@@ -17,6 +17,7 @@ Transform::Transform(vector<AffineTransform> affineTransforms) {
 Point2D Transform::operator()(Point2D point) {
     const AffineTransform transform = transforms[dist(gen)];
     const Point2D res = transform.applyToPoint(point);
+
     return res;
 }
 
