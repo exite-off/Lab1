@@ -36,7 +36,7 @@ int main(const int argc, char* argv[]) {
 
     vector<Point2D> points;
     points.reserve(N);
-    points.push_back(system(start));
+    points.push_back(start); 
 
     for (int i = 1; i < N; i++) {
         points.push_back(system(points.back()));
