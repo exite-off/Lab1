@@ -1,9 +1,8 @@
 #pragma once
 
-#include <vector>
 #include "point.h"
 
-class AffineTransform{
+class AffineTransform {
 private:
     double a11, a12, a21, a22;
     double b1, b2;

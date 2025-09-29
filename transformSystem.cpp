@@ -1,8 +1,5 @@
 #include "transformSystem.h"
 
-#include <iostream>
-
-#include "point.h"
 #include <random>
 
 using namespace std;
@@ -15,10 +12,8 @@ Transform::Transform(vector<AffineTransform> affineTransforms) {
 }
 
 Point2D Transform::operator()(Point2D point) {
-    const AffineTransform transform = transforms[dist(gen)];
+    AffineTransform transform = transforms[dist(gen)];
     const Point2D res = transform.applyToPoint(point);
 
     return res;
 }
-
-

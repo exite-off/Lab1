@@ -1,11 +1,10 @@
 #pragma once
 #include <string>
 #include <vector>
-#include <random>
 #include "point.h"
 #include "affineTransform.h"
 
-class FileIO{
+class FileIO {
 public: 
     static void read_file(const std::string &filepath, int &N, Point2D &startPoint, std::vector<AffineTransform> &transforms);
 

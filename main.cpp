@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿// Compiler - MSVC, Authors: Vitalii Fedin, Andrii Itsko
+
+#include <iostream>
 #include <vector>
 #include "transformSystem.h"
 #include "point.h"
@@ -7,13 +9,27 @@
 
 using namespace std;
 
-int main() {
+int main(const int argc, char* argv[]) {
+
+    if (argc != 3) {
+        std::cerr << "Usage: " << argv[0] << " <inputFile> <outputFile>" << std::endl;
+        return 1;
+    }
+
+    string input_path = argv[1];
+    string output_path = argv[2];
 
     int N;
     Point2D start;
     vector<AffineTransform> transforms;
 
-    FileIO::read_file("C:\\Users\\vfedi\\CLionProjects\\Lab1\\SampleInput.txt", N, start, transforms);
+    try {
+        FileIO::read_file(input_path, N, start, transforms);
+    } catch (const std::exception &e) {
+        std::cerr << "Error reading input file: " << e.what() << std::endl;
+        return 1;
+    }
+
     Transform system(transforms);
 
     vector<Point2D> points;
@@ -24,7 +40,11 @@ int main() {
         points.push_back(system(points.back()));
     }
 
-    FileIO::write_in_file("C:\\Users\\vfedi\\CLionProjects\\Lab1\\out.txt", points);
+    try {
+        FileIO::write_in_file(output_path, points);
+    } catch (const std::exception &e) {
+        std::cerr << "Error writing output file: " << e.what() << std::endl;
+    }
 
     return 0;
 }
