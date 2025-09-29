@@ -1,4 +1,6 @@
-﻿// Compiler - MSVC, Authors: Vitalii Fedin, Andrii Itsko
+﻿// Authors: Vitalii Fedin, Andrii Itsko
+// Compiler - MSVC (Vitalii Fedin)
+// Compiler - GCC/G++ через MSYS2 (Andrii Itsko)
 
 #include <iostream>
 #include <vector>
